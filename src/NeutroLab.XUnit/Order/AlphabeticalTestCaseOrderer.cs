@@ -7,7 +7,7 @@ using Xunit.Sdk;
 namespace NeutroLab.XUnit.Order
 {
     //https://github.com/xunit/samples.xunit/blob/main/TestOrderExamples/TestCaseOrdering/AlphabeticalOrderer.cs
-    public class AlphabeticalOrderer : ITestCaseOrderer
+    public class AlphabeticalTestCaseOrderer : ITestCaseOrderer
     {
         public IEnumerable<TTestCase> OrderTestCases<TTestCase>(IEnumerable<TTestCase> testCases)
                 where TTestCase : ITestCase

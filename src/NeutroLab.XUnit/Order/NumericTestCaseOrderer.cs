@@ -7,7 +7,7 @@ using Xunit.Sdk;
 namespace NeutroLab.XUnit.Order
 {
     //https://github.com/mirano-galijasevic/DapperTest
-    public class NumericOrderer : ITestCaseOrderer
+    public class NumericTestCaseOrderer : ITestCaseOrderer
     {
         public IEnumerable<TTestCase> OrderTestCases<TTestCase>(IEnumerable<TTestCase> testCases)
             where TTestCase : ITestCase

@@ -5,7 +5,7 @@ using Xunit.Abstractions;
 
 namespace NeutroLab.XUnit
 {
-    [TestCaseOrderer("NeutroLab.XUnit.Order.NumericOrderer", "NeutroLab.XUnit")]
+    [TestCaseOrderer("NeutroLab.XUnit.Order.NumericTestCaseOrderer", "NeutroLab.XUnit")]
     public class UnitTestWithFixtureNumericOrder<TFixture> : UnitTestWithFixture<TFixture>
          where TFixture : TestFixture
     {
