@@ -44,17 +44,18 @@ namespace NeutroLab.BusinessLogic.Test
         [Fact]
         public void Assert_Collection_All_Test()
         {
-            var calc = new Calculation();
+            var calc = new Calculator();
             Assert.All(calc.FiboNumbers, x => Assert.NotEqual(0, x));
         }
 
         [Fact]
         public void Assert_Collection_Contain_Test()
         {
-            var calc = new Calculation();
+            var calc = new Calculator();
             Assert.Contains(13, calc.FiboNumbers);
         }
 
+        [Trait("category","customer")]
         [Fact]
         public void Assert_Range_Test()
         {
@@ -62,6 +63,7 @@ namespace NeutroLab.BusinessLogic.Test
             Assert.InRange<int>(cust.Age, 25, 35);
         }
 
+        [Trait("category", "customer")]
         [Fact]
         public void Assert_Exception_Test()
         {
@@ -70,6 +72,7 @@ namespace NeutroLab.BusinessLogic.Test
             Assert.Equal("name should not be null", exception.ParamName);
         }
 
+        [Trait("category", "customer")]
         [Fact]
         public void Assert_Type_Test()
         {
