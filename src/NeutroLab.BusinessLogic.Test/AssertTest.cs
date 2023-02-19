@@ -1,0 +1,83 @@
+﻿using System;
+using Xunit;
+
+namespace NeutroLab.BusinessLogic.Test
+{
+	public class AssertTest
+	{
+		[Fact]
+		public void Assert_Int_Test()
+		{
+			int expected = 1;
+			int actual = 1;
+
+			Assert.Equal(expected, actual);
+		}
+
+        [Fact]
+        public void Assert_Double_Test()
+        {
+            double expected = 1.72;
+			double actual = 1.73;
+
+            Assert.Equal(expected, actual, 1);
+        }
+
+        [Fact]
+        public void Assert_String_Test()
+        {
+            Name name = new Name();
+            string actual = name.MakeFullName("Neutro", "Foton");
+
+            Assert.Contains("neutro", actual, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        [Fact]
+        public void Assert_String_Regex_Test()
+        {
+            Name name = new Name();
+            string actual = name.MakeFullName("Neutro", "Foton");
+
+            Assert.Matches("[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+", actual);
+        }
+
+        [Fact]
+        public void Assert_Collection_All_Test()
+        {
+            var calc = new Calculation();
+            Assert.All(calc.FiboNumbers, x => Assert.NotEqual(0, x));
+        }
+
+        [Fact]
+        public void Assert_Collection_Contain_Test()
+        {
+            var calc = new Calculation();
+            Assert.Contains(13, calc.FiboNumbers);
+        }
+
+        [Fact]
+        public void Assert_Range_Test()
+        {
+            var cust = new Customer();
+            Assert.InRange<int>(cust.Age, 25, 35);
+        }
+
+        [Fact]
+        public void Assert_Exception_Test()
+        {
+            var cust = new Customer();
+            ArgumentNullException exception = Assert.Throws<ArgumentNullException>(()=>cust.GetOrder(null));
+            Assert.Equal("name should not be null", exception.ParamName);
+        }
+
+        [Fact]
+        public void Assert_Type_Test()
+        {
+            var cust = CustomerFactory.CreateCustomer(200);
+
+            Assert.IsAssignableFrom<Customer>(cust);
+            Assert.IsType<LoyalCustomer>(cust);
+        }
+    }
+}
+
