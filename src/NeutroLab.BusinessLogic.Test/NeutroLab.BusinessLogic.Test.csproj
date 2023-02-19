@@ -25,6 +25,8 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="ShareFixtureAcrossTestClasses\" />
+    <None Remove="ShareDataTest\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json">
@@ -33,6 +35,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ConfigurationTest\" />
+    <Folder Include="ShareFixtureAcrossTestClasses\" />
+    <Folder Include="ShareDataTest\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeutroLab.BusinessLogic\NeutroLab.BusinessLogic.csproj" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using NeutroLab.BusinessLogic.Test.ShareDataTest;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -52,6 +53,37 @@ namespace NeutroLab.BusinessLogic.Test
             int localRandom = new Random((int)DateTime.Now.Ticks).Next();
             this.testOutputHelper.WriteLine($"CalculatorFixture random ={calculatorFixture.Random}");
             this.testOutputHelper.WriteLine($"Local random ={localRandom}");
+        }
+
+        [Theory]
+        [InlineData(9, true)]
+        [InlineData(100, false)]
+        public void Odd_And_Even_Test(int value, bool expected)
+        {
+            var calc = calculatorFixture.Calc;
+            bool actual = calc.IsOdd(value);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [MemberData(nameof(OddEvenShareDataTest.IsOddOrEvenData),MemberType =typeof(OddEvenShareDataTest))]
+        public void Odd_And_Even_Test_Shared_Data(int value, bool expected)
+        {
+            var calc = calculatorFixture.Calc;
+            bool actual = calc.IsOdd(value);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [IsOddOrEvenData]
+        public void Odd_And_Even_Test_Shared_Data_Custom_Attribute(int value, bool expected)
+        {
+            var calc = calculatorFixture.Calc;
+            bool actual = calc.IsOdd(value);
+
+            Assert.Equal(expected, actual);
         }
 
         public void Dispose()
