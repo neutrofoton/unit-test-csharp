@@ -23,8 +23,10 @@ namespace NeutroLab.BusinessLogic.Test.ConfigurationTest
                 .Should().NotBeNull("Configuration object cannot be null");
 
             configuration.ConnectionString
-                .Should().NotBeNull("Connection string cannot be null.")
-                .And.Should().NotBeSameAs(String.Empty, "Connection cannot be an empty string");
+                .Should().NotBeNull("Connection string cannot be null.");
+
+            configuration.ConnectionString
+                .Should().NotBeSameAs(String.Empty, "Connection cannot be an empty string");
 
             Output.WriteLine($"Connection string is: {configuration.ConnectionString}");
         }
