@@ -6,5 +6,16 @@
 
   <ItemGroup>
     <Folder Include="Config\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Impl\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\Impl\" />
+    <None Remove="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
 </Project>

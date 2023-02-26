@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeutroLab.BusinessLogic", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeutroLab.BusinessLogic.Test", "NeutroLab.BusinessLogic.Test\NeutroLab.BusinessLogic.Test.csproj", "{35B8AA39-B1BB-4B8F-BDBF-5210C36D8D88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeutroLab.Web", "NeutroLab.Web\NeutroLab.Web.csproj", "{ED152D36-FE0C-414C-8F18-42F0A5F264F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeutroLab.Web.Test", "NeutroLab.Web.Test\NeutroLab.Web.Test.csproj", "{50BD54E3-A3F5-4AD1-B369-98566BECCBC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{35B8AA39-B1BB-4B8F-BDBF-5210C36D8D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35B8AA39-B1BB-4B8F-BDBF-5210C36D8D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35B8AA39-B1BB-4B8F-BDBF-5210C36D8D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED152D36-FE0C-414C-8F18-42F0A5F264F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED152D36-FE0C-414C-8F18-42F0A5F264F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED152D36-FE0C-414C-8F18-42F0A5F264F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED152D36-FE0C-414C-8F18-42F0A5F264F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50BD54E3-A3F5-4AD1-B369-98566BECCBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50BD54E3-A3F5-4AD1-B369-98566BECCBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50BD54E3-A3F5-4AD1-B369-98566BECCBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50BD54E3-A3F5-4AD1-B369-98566BECCBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
