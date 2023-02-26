@@ -54,6 +54,10 @@ public class LoginsTests
         var modelView = Mock.Of<LoginViewModel>(x => x.Email == "a@b.com" && x.Password == password);
         var model = Mock.Of<User>(x => x.Password == password);
 
+        //method 1: specific value of GetUser parameter
+        //_logins.Setup(x => x.GetUser(modelView.Email)).ReturnsAsync(model);
+
+        //method 2: for any string
         _logins.Setup(x => x.GetUser(It.IsAny<string>())).ReturnsAsync(model);
 
         var result = await _controller.Login(modelView);
