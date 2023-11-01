@@ -9,3 +9,4 @@ We can use the UnitTest classes by inheriting from them in handling test executi
 # References
 1. [Integration Testing Web](https://github.com/aussiearef/PersonalPhotos)
 2. [ASP.NET Core C# Unit Testing, Mocking, Integration Testing](https://www.youtube.com/playlist?list=PLOeFnOV9YBa4Q1a7V5jWTGG9RSpKMYTpK)
+3. https://www.andrewhoefling.com/Blog/Post/moq-entity-framework-dbset
